@@ -1,0 +1,71 @@
+,,Project Name,Fly far ladies website testing,,,,,
+,,Test case Author,Sanjida Akter,,,,,
+,,Test Environment,Windows 10,,,,,
+Module,Sign up function,,,,,,,
+,,,,,,,,
+Test step,Test Scenario,Step to reproduce,Input Data,Expected Results ,Actual Results,Execution Status ,Bug Priority,Bug Sev
+1,Verify Sign Up functionality with all valid functions,"1.Launch the website and navigate to the sign up page. 
+2.Fill in the required fields with valid information for the test account. 
+3. Click the submit button to initiate the sign-up process.","Name,email,cont num,password",The user should be successfully signed up and welcomed to the home page.,The application allows the user to Signed up successfully,Pass,,
+2,Verify Sign Up functionality with empty feild,"1.Launch the website and navigate to the sign up page. 
+2.Left the feilds empty for the test account.
+3. Click the submit button to initiate the sign-up process.","Name,email,cont num",The application should display an error message indicating that the required fields cannot be empty.,The application massage passed:please fill out the feild,Pass,,
+3,Verify Sign Up functionality with invalid info,"1.Launch the website and navigate to the sign up page. 
+2.Fill in the required fields with invalid information for the test account. 
+3. Click the submit button to initiate the sign-up process.",Alphabet characters on cont. num,The application should display an error message indicating that the contact number should only contain numeric characters.,The user is allowed to proceed with and registration done,Reject,high,Major
+4,,,Numeric characters on name feild,The application should display an error message indicating that the name should only contain alphabetic characters.,The user is allowed to proceed with and registration done,Reject,high,Major
+5,Verify Sign Up functionality with existing email,"1.Launch the website and navigate to the sign up page. 
+2.Fill in the required fields with existing email for the test account. 
+3. Click the submit button to initiate the sign-up process.",Exixting email with different pass/info,The application should display an error message indicating that the user already exists.,Error massage passed:user already exist,Pass,,
+,,,,,,,,
+Module,Log in function,,,,,,,
+,,,,,,,,
+1,Verify log in functionality with all valid functions,"1.Launch the website and navigate to the log in page. 
+2.Fill in the required fields with valid information for the test account. 
+3. Click the log in button to initiate Home page.","name,password",The user should be successfully signed up and welcome to home page.,The application allows the user to Signed up successfully,Pass,,
+2,Verify log in functionality with all invalid functions,"1.Launch the website and navigate to the log in page. 
+2.Fill in the required fields with invalid information for the test account. 
+3. Click the log in button to initiate Home page.","name,password",The user should pass warning massage,The application not allows the user to log in,Pass,,
+3,Verify log in functionality with empty email feild,"1.Launch the website and navigate to the log in page. 
+2.Fill in the required fields with empty email feild for the test account. 
+3. Click the log in button to initiate Home page.",valid pass,,,Pass,,
+4,Verify log in functionality with empty pass feild,"1.Launch the website and navigate to the log in page. 
+2.Fill in the required fields with empty password feild for the test account. 
+3. Click the log in button to initiate Home page.",valid email,,,Pass,,
+5,Verify navigation from forgot pass page,"1.Launch the website and navigate to the log in page. 
+2.Click the forgot password button to navigation page.",click forgot pass, navigate to the page,Navigated successfully to the forgot password page,Pass,,
+,,,,,,,,
+Module,Dashboard,,,,,,,
+,,,,,,,,
+1,Verify dashboard input with valid inputs,"1. Launch the website and navigate to the dashboard page.
+2. Enter valid information in all required fields.",Valid input data,The system should successfully process the input and navigate the user to the appropriate details page.,Each user was successfully navigated to their respective details page.,Pass,,
+2,Verify dashboard input with invalid inputs,"1. Launch the website and navigate to the dashboard page.
+2. Enter the NID number in lowercase.",NID number in lowercase,The system should reject the input and prompt the user to enter the NID number in uppercase.,The system granted access and saved the field with the lowercase NID number.,Reject,Midium,Low
+3,Verify dashboard links,"1. Launch the website and navigate to the dashboard page.
+2. Click on the icons provided on the dashboard.",Click on icons,The system should navigate the user to the corresponding pages.,The links are not working. The dashboard page remains unchanged after clicking the icons.,Reject,Midium,Low
+4,Verify add travelar with invalid inputs,"1. Launch the website and navigate to the dashboard's add traveler page.
+2. Leave the bank name field empty.",Empty bank name field,The system should display a warning message indicating that the bank name field is required.,The system accepted the empty bank name field and proceeded with the traveler addition process.,Reject,Midium,Low
+5,Verify add travelar with invalid inputs,"1. Launch the website and navigate to the dashboard's add traveler page.
+2. Leave the cheque number field empty.",Empty cheque number field,The system should display a warning message indicating that the cheque number field is required.,The system accepted the empty cheque number field and proceeded with the traveler addition process.,Reject,Midium,Low
+7,Verify add travelar with invalid inputs,"1. Launch the website and navigate to the add traveler page.
+2. Enter the birth certificate number in the passport number field.",Birth certificate number in passport field,The system should display an appropriate message indicating that the passport number field should contain the passport number.,The system saved the birth certificate number as the passport number.,Reject,Midium,Low
+8,Verify add travelar with invalid inputs,"1. Launch the website and navigate to the add traveler page.
+2. Enter a numeric value in the traveler name field.",Numeric input in name field,The system should reject the input and prompt the user to enter a valid name.,The system accepted the numeric input and proceeded with the traveler addition process.,Reject,Midium,Low
+9,Verify add travelar with invalid inputs,"1. Launch the website and navigate to the add traveler page.
+2. Enter a birth date in the future (e.g., 2024).",Birth date in 2024,The system should display a warning message indicating that the birth date cannot be in the future.,The system accepted the future birth date and proceeded with the traveler addition process.,Reject,Midium,Low
+10,"Add deposit , add travelar with invalid inputs","1. Launch the website and navigate to the add deposit and add traveler pages.
+2. Enter alphabetic characters in the bank name field.",Alphabetic input in bank name field,The system should display a warning message indicating that the bank name field should contain numeric characters.,The system accepted the alphabetic input and proceeded with the deposit and traveler addition processes.,Reject,Midium,Low
+11,Verify add deposit with invalid inputs,"1. Launch the website and navigate to the add deposit page.
+2. Enter numeric characters in the bank name field.",Numeric input in bank name field,The system should reject the input and prompt the user to enter a valid bank name.,The system accepted the numeric input and proceeded with the deposit process.,Reject,Midium,Low
+,,,,,,,,
+,,,,,,,,
+Module,Search bar,,,,,,,
+,,,,,,,,
+1,Verify dynamic dropdown search bar,"1.Enter Search Criteria 
+2.Trigger Dropdown",click option,The dropdowm element should navigate to the details page,each has navigate to their own details page,Pass,,
+2,Verify dynamic dropdown search result,"1.Enter Search Criteria 
+2.Trigger Dropdown 
+3.Verify Search Result",type input character,matching option should be shown by alphabetic order,matching option not showing first,Reject,Low,Low
+3,Verify advance search ,"1.Enter Search Criteria 
+2.Add filter for specification 
+3.Verify Search Result",click radio button,matching option should be shown,each matching option is showing ,Pass,,
