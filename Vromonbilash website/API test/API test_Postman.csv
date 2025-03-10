@@ -1,0 +1,22 @@
+,,,,,,,,,,
+,,Website Name : Vromonbilash,Tool : Postman,,,,,,,
+,,,,,,,,,,
+Test Case ID,Test Case Name,Test Case Title,API Endpoint,HTTP ,Request Headers,Request Body,Expected Response Code,Actual Response Code,Actual Result,Test Case Status
+TC_01,Creates a new user,Verify sign up with valid and new username and password to create new user successfully,http://vromonbilash.com/users,POST,JSON,"{ ""username"": ""johndoe"", ""password"": ""secret123"" }",200,200,New user is created successfully,Pass
+TC_02,Sign up,Verify sign up with a duplicate username returns an error,http://vromonbilash.com/users,POST,JSON,"{ ""username"": ""johndoe"", ""password"": ""secret123"" }",200,200,Error message is displayed,Pass
+TC_03,Login Success,Verify successful login with valid credentials.,http://vromonbilash.com/login,POST,JSON,"{""userLoginId"": ""01950375585"", ""password"": ""12345678"", ""user_type"": ""R""}",200,200,Successfully loged in,Pass
+TC_04,Login Failure,Verify unsuccessful login with invalid credentials.,http://vromonbilash.com/login,POST,JSON,"{""userLoginId"": ""01950375585"", ""password"": ""wrongpass"", ""user_type"": ""R""}",401,401,Error message is displayed,Pass
+TC_05,Get Web,Verify successful retrieval of the website's homepage.,http://vromonbilash.com/,GET,,,200,200,Successfully retrieval of website home page,Pass
+TC_06,Check Resort Details,Verify successful retrieval of resort details.,https://vromonbilas.com/_next/data/gNu010UI,GET,,,200,200,Successfully retrieval of ressort details,Pass
+TC_09,Check Out Resort,Verify successful checkout process for a resort.,https://vromonbilas.com/resort-checkout,POST,JSON,"{""rooms"": [{""room_type"": ""Wrng""}]}",401,401,Successfully checkout process for a resort.,Pass
+TC_10,Check Tourist Spot Functionality,Verify successful retrieval of tourist spot information.,https://admin.vromonbilas.com/v1/tourist-spot,GET,,,200,200,Successfully retrieval of tourist spot information.,Pass
+TC_11,Get Homepage,Verify successful retrieval of the website's homepage.,http://vromonbilash.com/,GET,,,200,200,Successfully retrieval of the website's homepage.,Pass
+TC_12,Get About Us Page,Verify successful retrieval of the website's About us page,[invalid URL removed],GET,,,200,200,Successful retrieval of the website's About us page,Pass
+TC_13,Get Contact Us Page,Verify successful retrieval of the website's Contact us page,http://vromonbilash.com/contact-us,GET,,,200,200,Successful retrieval of the website's Contact us page,Pass
+TC_14,Get Services Page,Verify successful retrieval of the website's Service page,[invalid URL removed],GET,,,200,200,Successful retrieval of the website's Service page,Pass
+TC_15,Get Gallery Page,Verify successful retrieval of the website's Gallery page,[invalid URL removed],GET,,,200,200,Successful retrieval of the website's Gallery page,Pass
+TC_16,Get Blog Page,Verify successful retrieval of the website's Blog page,[invalid URL removed],GET,,,200,200,Successful retrieval of the website's Blog page,Pass
+TC_17,Get Careers Page,Verify successful retrieval of the website's Careers page,[invalid URL removed],GET,,,200,200,Successful retrieval of the website's Careers page,Pass
+TC_18,Get Terms & Conditions Page,Verify successful retrieval of the website's Terms and condition page,[invalid URL removed],GET,,,200,400,No of the website's Terms and condition page shown,Fail
+TC_19,Get Privacy Policy Page,Verify successful retrieval of the website's Privacy Policy page,[invalid URL removed],GET,,,200,400,Noretrieval of the website's Privacy Policy page shown,Fail
+TC_20,Get Faq Page,Verify successful retrieval of the website's FAQ page,[invalid URL removed],GET,,,200,200,Successful retrieval of the website's FAQ page,Pass
