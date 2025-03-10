@@ -1,0 +1,22 @@
+,,,,,,,,,
+Tester: Sanjida Akter,,Date: 10 Dec 2024,"Browser: Chrome, Firefox, Edge","Platform & Devices: Android, iPhone, iPad, Tablet, Laptop, iOS, Windows,PC",,,,,
+,,,,,,,,,
+Bug ID,Module,Issue Title,Issue Summary,Steps to reproduce,Expected result,Actual result,Attachments,Priority,Severity
+Bug 001,Sign-up,Sign up with invalid input data,"The application allows users to sign up with invalid input data, such as alphabetic characters in the contact number field and numeric characters in the name field.","1.Navigate to the Sign Up page.
+2.In the ""Contact Number"" field, enter a string containing alphabetic characters (e.g., ""abc"").
+3.In the ""Name"" field, enter a string containing numeric characters (e.g., ""123"").
+4.Click the ""Sign Up"" button.",The application should display an error message indicating that the input data is invalid and prevent the user from signing up.,"The application allows the user to sign up with the invalid input data, potentially leading to data integrity issues and system errors.",,High,Major
+Bug 002,Search,Incorrect Search Result Ordering,"When searching for a specific option, the matching option is not consistently displayed as the first result.","1.Navigate to the search bar within the application.
+2.Input a specific keyword or phrase that should match an existing option.
+3.Click the search button or press Enter.","The search results should be displayed in a relevant order, with the most closely matching option appearing at the top of the list.",The matching option is not consistently displayed as the first result. It may appear lower in the list or not appear at all.,,Mid,Low
+Bug 003,Dashboard,Non-Functional Dashboard Links,"The dashboard links are not functioning correctly, hindering user navigation and preventing access to important information and functionalities.","1.Log in to the application.
+2.Navigate to the Dashboard page.
+3.Click on a specific link or button on the dashboard.",The clicked link or button should redirect to the corresponding page or perform the intended action.,"The link or button does not function as expected. The user may be redirected to an incorrect page, receive an error message, or experience no response.",,Mid,Low
+Bug 004,Order Management,Invalid Input Handling for Adding Traveler,"The application allows users to add travelers with invalid input data, such as empty fields or invalid characters.","1.Navigate to the ""Add Traveler"" page.
+2.Leave one or more required fields empty (e.g., Name, Contact Number, Email).
+3.Enter invalid characters in any of the fields (e.g., special symbols, excessive length).
+4.Click the ""Add Traveler"" button.",The application should display appropriate error messages for each invalid field and prevent the traveler from being added.,The application either allows the traveler to be added with invalid data or displays generic error messages that do not provide specific guidance to the user.,,Mid,Low
+Bug 005,Payment,Invalid Input Handling for Deposit Functionality," The application allows users to deposit funds with invalid input data, such as alphabetic characters in the bank name field.","1.Navigate to the Deposit page.
+2.In the ""Bank Name"" field, enter a string containing alphabetic characters (e.g., ""ABC Bank"").
+3.Enter valid values for other fields, such as account number, amount, etc.
+4.Click the ""Deposit"" button.",The application should display an error message indicating that the bank name should only contain numeric characters and prevent the transaction.,"The application allows the user to proceed with the deposit, potentially leading to incorrect data entry and processing errors.",,High,Minor
